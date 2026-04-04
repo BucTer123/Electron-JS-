@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Browse</title>
+</head>
+<style>
+    body {
+        background: ghostwhite;
+        color: black;
+        font-family: sans-serif;
+        font-size: medium;
+        font-weight: bolder;
+        font-style: initial;
+        padding: 0;
+        margin: 0;
+        max-width: 1920px;
+        width: 100%;
+        max-height: 1080px;
+        height: 100%;
+    }
+
+    .searcher {
+        background: whitesmoke;
+        color: black;
+        padding: 192px;
+        margin: 108px;
+        border: 1px solid dimgray;
+    }
+
+    .searcher:focus {
+        border: 1px solid black;
+    }
+
+    input {
+        background: white;
+        color: black;
+        padding: 14px;
+        margin: 7px;
+        border: 1px solid dimgrey;
+    }
+
+    input:focus {
+        background: black;
+        color: white;
+        border: 1px solid blue;
+    }
+
+    button {
+        background: black;
+        color: ghostwhite;
+        padding: 12px;
+        margin: 6px;
+        border: 1px solid dimgrey;
+        opacity: 1;
+    }
+
+    button:focus {
+        background: ghostwhite;
+        color: black;
+        border: 1px solid blue;
+    }
+
+    button:hover {
+        opacity: 0.7;
+        transform: translateY(4px);
+    }
+
+    button:active {
+        opacity: 0.3;
+        transform: translateX(5px);
+    }
+</style>
+<body>
+    <div class="searcher">
+        <input id="srch_inp" type="text" placeholder="Write domain :" />
+        <button id="srch_btn"type="button">Search</button>
+    </div>
+</body>
+<script>
+    const inp_srch = document.getElementById("srch_inp");
+    const btn_srch = document.getElementById("srch_btn");
+
+    btn_srch.addEventListener("click", function () {
+        if (inp_srch.value === "") {
+            window.alert("ERROR!: Write domain!");
+        } else {
+            resp = inp_srch.value;
+            window.open(resp, "_blank");
+        }
+    })
+</script>
+</html>
