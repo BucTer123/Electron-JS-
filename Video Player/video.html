@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" >
+	<title>UI</title>
+</head>
+<style>
+	body {
+		background: whitesmoke;
+		color: black;
+		font-family: sans-serif;
+		font-size: medium;
+		font-weigth: bolder;
+		font-style: initial;
+		padding: 0;
+		margin: 0;
+	}
+	
+	input {
+		background: ghostwhite;
+		color: black;
+		padding: 14px;
+		margin: 7px;
+		border: 1px solid dimgray;
+		opacity: 1;
+	}
+	
+	input:focus {
+		background: black;
+		color: whitesmoke;
+		border: 1px solid blue;
+		opacity: 0.9;
+	}
+	
+	audio {
+		background: white;
+		color: black;
+		border: 1px solid black;
+	}
+	
+	audio:focus {
+		border: 1px solid blue;
+	}
+</style>
+<body>
+	<input id="filez" type="file" />
+	<br><br>
+	
+	<video id="playz" width="800" height="600" ></video>
+</body>
+<script>
+	const choice = document.getElementById("filez");
+	const start = document.getElementById("playz");
+	
+	const f = this.filez[0];
+	choice.addEventListener("change", function () {
+		if (f) {
+			const url = URL.createObjectURL(f);
+			start.src = url;
+			start.play();
+	});
+</script>
+</html>
