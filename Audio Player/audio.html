@@ -32,13 +32,13 @@
 		opacity: 0.9;
 	}
 	
-	video {
+	audio {
 		background: white;
 		color: black;
 		border: 1px solid black;
 	}
 	
-	video:focus {
+	audio:focus {
 		border: 1px solid blue;
 	}
 </style>
@@ -46,7 +46,7 @@
 	<input id="fl" type="file" />
 	<br><br>
 	
-	<audio id="pl" width="800" height="600" ></audio>
+	<audio id="pl" accept="audio/*" ></audio>
 </body>
 <script>
 	const f = document.getElementById("fl");
