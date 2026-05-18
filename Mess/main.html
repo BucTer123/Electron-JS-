@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8" >
+	<title>Main</title>
+</head>
+<style>
+
+body {
+	background: white;
+	color: black;
+	font-family: sans-serif;
+	font-size: medium;
+	font-weight: bolder;
+	font-style: initial;
+	padding: 0;
+	margin: 0;
+	max-width: 1920px;
+	width: 100%;
+	max-height: 1080px;
+	height: 100vh;
+}
+
+.first_container {
+	background: gray;
+	color: white;
+	padding: 40px;
+	margin: 20px;
+	border: 1px solid dimgray;
+}
+
+.first_container:focus {
+	background: white;
+	color: gray;
+	border: 1px solid blue;
+}
+
+.list_chats_container {
+	background: ghostwhite;
+	color: black;
+	padding: 60px;
+	margin: 30px;
+	border: 1px solid dimgray;
+}
+
+.list_chats_container:focus {
+	background: black;
+	color: ghostwhite;
+	border: 1px solid blue;
+} 
+
+.accound_container {
+	background: black;
+	color: white;
+	padding : 20px;
+	margin: 10px;
+	border: 1px solid dimgray;
+}
+
+.accound_container:focus {
+	background: white;
+	color: black;
+	border: 1px solid blue;
+}
+
+input {
+	background: white;
+	color: black;
+	padding: 18px;
+	margin 9px;
+	border: 1px solid dimgray;
+	opacity: 1;
+}
+
+input:focus {
+	background: black;
+	color: white;
+	border: 1px solid blue;
+	opacity: 1;
+}
+
+button {
+	background: black;
+	color: white;
+	padding: 16px;
+	margin: 8px;
+	opacity: 1;
+	border: 1px solid dimgray;
+}
+
+button:focus {
+	background: white;
+	color: black;
+	border: 1px solid blue;
+	opacity: 0.9;
+}
+
+button:hover {
+	opacity: 0.7;
+	transform: translateY(4px);
+}
+
+button:active {
+	opacity: 0.3;
+	transform: translateX(5px);
+}
+
+a {
+	color: black;
+}
+
+</style>
+<body>
+	<div class="first_container">
+		<input id="search" type="text" />
+		<button id="btn_srch" type="button" />
+	</div>
+	
+	<div class="list_chats_container">
+		<ol>
+			<li><a href="chat1.html">Goto chat</a></li>
+		</ol>
+	</div>
+	
+	<div class="accound_container"><button id="account" type="submit" >Account</button></div>
+	
+</body>
+<script>
+	const inp1 = document.getElementById("search");
+	const btn1 = document.getElementById("btn_srch");
+	const btn2 = document.getElementById("account");
+	
+	btn1.addEventListener("click", function () {
+		if (inp1.value == "chat1 " || inp1.value == "CHAT1") {
+			window.location.href = "chat1.html";
+		}
+	});
+	
+	btn2.addEventListener("click", function () {
+		window.location.href = "account.html";
+	});
+	
+	document.getElementById("keydown", function () {
+		if (event.key == "1") {
+			window.location.href = "chat1.html";
+		}
+	});
+	
+</script>
+</html>
